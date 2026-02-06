@@ -1,1 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background: linear-gradient(120deg, #0f0f0f, #1a001a);
+  color: white;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Sections */
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Boutons stylés */
+button {
+  margin-top: 30px;
+  padding: 16px 36px;
+  border-radius: 40px;
+  background: linear-gradient(45deg, #ff4d88, #ff80bf);
+  box-shadow: 0 0 20px rgba(255, 77, 136, 0.6);
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 35px rgba(255, 128, 191, 1);
+}
+
+/* Lettre */
+.letter p {
+  font-size: 22px;
+  max-width: 600px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Question finale */
+.question h2 {
+  font-size: 32px;
+}
+
+#response {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #ffb3d9;
+}
+
+/* Fade in lettre */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typewriter */
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid pink;
+  white-space: nowrap;
+}
+
+/* Pluie de cœurs */
+.heart {
+  position: fixed;
+  top: -20px;
+  font-size: 24px;
+  animation: fall linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh); opacity: 0; }
+}
+
+/* GIF de fond */
+.bg-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+/* Animations */
+.fade-up { animation: fadeUp 1.5s ease forwards; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fond glow animé */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,77,136,0.15), transparent 70%);
+  animation: pulse 6s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes pulse { from {opacity:0.4;} to {opacity:0.8;} }
+
+/* ===== VERSION MOBILE ===== */
+@media screen and (max-width: 768px) {
+  .section { padding: 20px; }
+  .intro h1 { font-size: 28px; }
+  .letter p { font-size: 18px; max-width: 90%; }
+  .question h2 { font-size: 24px; }
+  button { padding: 12px 24px; font-size: 16px; }
+  .bg-gif { opacity: 0.15; }
+}
 
