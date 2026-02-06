@@ -1,3 +1,4 @@
+/* ===== Styles de base ===== */
 body {
   font-family: 'Playfair Display', serif;
   background: linear-gradient(120deg, #0f0f0f, #1a001a);
@@ -29,11 +30,10 @@ p {
   color: #ffb3d9;
 }
 
-/* Boutons stylisés */
+/* Boutons principaux et secondaires */
 .btn {
   display: inline-block;
   margin: 10px;
-  padding: 16px 36px;
   border-radius: 40px;
   background: linear-gradient(45deg, #ff4d88, #ff80bf);
   font-size: 18px;
@@ -41,6 +41,16 @@ p {
   text-decoration: none;
   text-align: center;
   transition: 0.3s;
+}
+
+.btn.main {
+  padding: 20px 40px;  /* boutons Oui/Non */
+}
+
+.btn.small {
+  padding: 12px 24px;  /* boutons Suivant / Retour */
+  font-size: 16px;
+  margin: 8px;
 }
 
 .btn:hover {
@@ -77,21 +87,16 @@ p {
 }
 
 /* ===== Version Mobile ===== */
-/* ===== Version Mobile ===== */
 @media screen and (max-width: 768px){
 
-  /* Boutons principaux (Oui/Non) */
-  .btn.main {
-    padding: 20px 40px; 
+  .btn.main { 
+    padding: 18px 36px; 
     font-size: 18px; 
-    margin: 12px;
   }
 
-  /* Boutons “Suivant / Retour” plus petits */
   .btn.small {
-    padding: 12px 24px;
-    font-size: 16px;
-    margin: 8px;
+    padding: 10px 20px; 
+    font-size: 14px; 
   }
   
   p { 
@@ -107,8 +112,8 @@ p {
   .section {
     padding: 15px;
   }
-  
+
   .heart {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
