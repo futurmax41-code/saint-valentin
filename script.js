@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Pluie de cœurs (toujours activée)
+  // Pluie de cœurs (toujours)
   setInterval(() => {
     const heart = document.createElement("div");
     heart.className = "heart";
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 300);
 
   // Cœurs qui suivent la souris → seulement sur PC
-  if(window.innerWidth > 768){ // désactive sur mobile
+  if(window.innerWidth > 768){
     document.addEventListener("mousemove", e=>{
       const heart = document.createElement("div");
       heart.className = "heart";
