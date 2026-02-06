@@ -5,29 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitation pour Lena ❤️</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- GIF de fond -->
   <img src="images/hearts.gif" class="bg-gif">
 
-<div class="section intro">
-  <h1 id="intro-text" class="typewriter"></h1>
-  <div id="invitation-buttons">
-    <button id="yesBtn">Oui 💕</button>
-    <button id="noBtn">Non 😢</button>
+  <div class="section intro">
+    <h1>Lena, veux-tu être ma Valentine ? 💖</h1>
+    <div class="buttons">
+      <button onclick="window.location.href='lettre.html'">Oui 💕</button>
+      <button onclick="alert('Oh 😢 j’espère que tu changeras d’avis !')">Non 😢</button>
+    </div>
   </div>
-</div>
 
-<!-- Zone pour les options après Oui -->
-<div class="section options" id="options" style="display:none;">
-  <h2>Choisis une option 💖</h2>
-  <button onclick="showContent('raison')">1️⃣ Mes raisons de t’aimer</button>
-  <button onclick="showContent('qualites')">2️⃣ Tes qualités</button>
-  <button onclick="showContent('decla')">3️⃣ Ma déclaration</button>
-  <button onclick="showContent('bisous')">4️⃣ Plein de bisous 😘</button>
-
-  <div id="content" style="margin-top:20px; font-size:22px; color:#ffb3d9;"></div>
-</div>
-
+  <script src="script.js"></script>
+</body>
+</html>
