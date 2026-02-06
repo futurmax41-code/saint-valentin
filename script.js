@@ -9,7 +9,7 @@ setInterval(() => {
   setTimeout(()=>heart.remove(), 6000);
 }, 300);
 
-// Cœurs qui suivent la souris
+// Cœurs qui suivent le doigt / souris
 document.addEventListener("mousemove", e=>{
   const heart = document.createElement("div");
   heart.className = "heart";
