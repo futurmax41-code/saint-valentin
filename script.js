@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const music = document.getElementById("music");
   if(music){
     music.volume = 0;
-    music.play().catch(()=>{}); // sur mobile, autorisation clic nécessaire
+    music.play().catch(()=>{}); // mobile bloque autoplay
     let vol = 0;
     const fadeIn = setInterval(() => {
       if(vol < 0.5){
