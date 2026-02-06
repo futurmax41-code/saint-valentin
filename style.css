@@ -77,11 +77,21 @@ p {
 }
 
 /* ===== Version Mobile ===== */
+/* ===== Version Mobile ===== */
 @media screen and (max-width: 768px){
-  button, .btn { 
+
+  /* Boutons principaux (Oui/Non) */
+  .btn.main {
     padding: 20px 40px; 
     font-size: 18px; 
     margin: 12px;
+  }
+
+  /* Boutons “Suivant / Retour” plus petits */
+  .btn.small {
+    padding: 12px 24px;
+    font-size: 16px;
+    margin: 8px;
   }
   
   p { 
