@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pour Lena ❤️</title>
+  <title>Invitation pour Lena ❤️</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
@@ -14,10 +14,26 @@
 
   <div class="section intro">
     <h1 id="intro-text" class="typewriter"></h1>
-    <button onclick="goToLetter()">Lire ma lettre 💌</button>
+    <div id="invitation-buttons">
+      <button onclick="respondYes()">Oui 💕</button>
+      <button onclick="respondNo()">Non 😢</button>
+    </div>
+  </div>
+
+  <!-- Zone pour les options après Oui -->
+  <div class="section options" id="options" style="display:none;">
+    <h2>Choisis une option 💖</h2>
+    <button onclick="showContent('raison')">1️⃣ Mes raisons de t’aimer</button>
+    <button onclick="showContent('qualites')">2️⃣ Tes qualités</button>
+    <button onclick="showContent('decla')">3️⃣ Ma déclaration</button>
+    <button onclick="showContent('bisous')">4️⃣ Plein de bisous 😘</button>
+
+    <div id="content" style="margin-top:20px; font-size:22px; color:#ffb3d9;"></div>
   </div>
 
   <div id="hearts-container"></div>
+
+  <audio id="music" src="images/musique.mp3" autoplay loop></audio>
 
   <script src="script.js"></script>
 </body>
