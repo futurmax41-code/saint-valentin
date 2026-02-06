@@ -129,3 +129,8 @@ body::before {
   button { padding: 12px 24px; font-size: 16px; width: 200px; }
   .bg-gif { opacity: 0.15; }
 }
+/* ===== Animation pour cœurs souris ===== */
+@keyframes follow {
+  from { transform: translateY(0); opacity: 0.8; }
+  to { transform: translateY(-20px); opacity: 0; }
+}
