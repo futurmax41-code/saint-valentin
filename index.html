@@ -13,14 +13,36 @@
   <div class="section intro">
     <h1>Lena, veux-tu être ma Valentine ? 💖</h1>
     <div class="buttons">
+      <!-- Boutons principaux -->
       <a href="raison.html" class="btn main">Oui 💕</a>
       <a href="#" class="btn main" onclick="alert('Oh 😢 j’espère que tu changeras d’avis !')">Non 😢</a>
     </div>
   </div>
 
-  <!-- Musique + animations -->
-  <audio id="music" src="images/musique.mp3" autoplay loop></audio>
-  <script src="script.js"></script>
+  <!-- Musique séparée pour mobile -->
+  <audio id="music" src="images/musique.mp3" loop></audio>
+  
+  <!-- Script animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Pluie de cœurs (toujours)
+      setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random()*100 + "vw";
+        heart.style.animationDuration = (3 + Math.random()*3) + "s";
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(), 6000);
+      }, 300);
+
+      // Musique → cliquer pour démarrer sur mobile
+      const music = document.getElementById("music");
+      document.body.addEventListener("click", () => {
+        music.play().catch(()=>{});
+      });
+    });
+  </script>
 
 </body>
 </html>
