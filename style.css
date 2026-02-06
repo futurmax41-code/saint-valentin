@@ -28,15 +28,13 @@ button:hover {
   transform: scale(1.1);
 }
 
-#content {
-  margin-top: 20px;
+p {
   font-size: 22px;
-  color: #ffb3d9;
   max-width: 600px;
   line-height: 1.5;
+  color: #ffb3d9;
 }
 
-/* GIF de fond */
 .bg-gif {
   position: fixed;
   top: 0; left: 0;
@@ -46,7 +44,7 @@ button:hover {
   z-index: -1;
 }
 
-/* Pluie de cœurs et explosion */
+/* Pluie de cœurs */
 .heart {
   position: fixed;
   top: -20px;
@@ -64,8 +62,7 @@ button:hover {
   to { transform: translateY(-20px); opacity: 0; }
 }
 
-/* Responsive mobile */
 @media screen and (max-width: 768px){
   button { padding: 12px 24px; font-size: 16px; }
-  #content { font-size: 18px; max-width: 90%; }
+  p { font-size: 18px; max-width: 90%; }
 }
