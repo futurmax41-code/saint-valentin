@@ -12,29 +12,22 @@
   <!-- GIF de fond -->
   <img src="images/hearts.gif" class="bg-gif">
 
-  <div class="section intro">
-    <h1 id="intro-text" class="typewriter"></h1>
-    <div id="invitation-buttons">
-      <button onclick="respondYes()">Oui 💕</button>
-      <button onclick="respondNo()">Non 😢</button>
-    </div>
+<div class="section intro">
+  <h1 id="intro-text" class="typewriter"></h1>
+  <div id="invitation-buttons">
+    <button id="yesBtn">Oui 💕</button>
+    <button id="noBtn">Non 😢</button>
   </div>
+</div>
 
-  <!-- Zone pour les options après Oui -->
-  <div class="section options" id="options" style="display:none;">
-    <h2>Choisis une option 💖</h2>
-    <button onclick="showContent('raison')">1️⃣ Mes raisons de t’aimer</button>
-    <button onclick="showContent('qualites')">2️⃣ Tes qualités</button>
-    <button onclick="showContent('decla')">3️⃣ Ma déclaration</button>
-    <button onclick="showContent('bisous')">4️⃣ Plein de bisous 😘</button>
+<!-- Zone pour les options après Oui -->
+<div class="section options" id="options" style="display:none;">
+  <h2>Choisis une option 💖</h2>
+  <button onclick="showContent('raison')">1️⃣ Mes raisons de t’aimer</button>
+  <button onclick="showContent('qualites')">2️⃣ Tes qualités</button>
+  <button onclick="showContent('decla')">3️⃣ Ma déclaration</button>
+  <button onclick="showContent('bisous')">4️⃣ Plein de bisous 😘</button>
 
-    <div id="content" style="margin-top:20px; font-size:22px; color:#ffb3d9;"></div>
-  </div>
+  <div id="content" style="margin-top:20px; font-size:22px; color:#ffb3d9;"></div>
+</div>
 
-  <div id="hearts-container"></div>
-
-  <audio id="music" src="images/musique.mp3" autoplay loop></audio>
-
-  <script src="script.js"></script>
-</body>
-</html>
