@@ -1,1 +1,43 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pour toi ❤️</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- GIF de fond -->
+  <img src="images/hearts.gif" class="bg-gif">
+
+  <!-- Intro -->
+  <div class="section intro">
+    <h1 id="intro-text" class="typewriter"></h1>
+    <button onclick="scrollToLetter()">Continuer 💌</button>
+  </div>
+
+  <!-- Lettre -->
+  <div class="section letter" id="letter">
+    <p id="letter-text"></p>
+  </div>
+
+  <!-- Question finale -->
+  <div class="section question">
+    <h2 class="fade-up">Est-ce que tu veux être ma Valentine ? 💖</h2>
+    <button onclick="yes()">Oui 💕</button>
+    <button onclick="yes()">Évidemment 😍</button>
+    <p id="response"></p>
+  </div>
+
+  <!-- Pluie de cœurs -->
+  <div id="hearts-container"></div>
+
+  <!-- Musique de fond -->
+  <audio id="music" src="images/musique.mp3" autoplay loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
