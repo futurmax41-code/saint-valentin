@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Pluie de cœurs
+  // Pluie de cœurs (toujours activée)
   setInterval(() => {
     const heart = document.createElement("div");
     heart.className = "heart";
@@ -11,20 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(()=>heart.remove(), 6000);
   }, 300);
 
-  // Cœurs qui suivent la souris / doigt
-  document.addEventListener("mousemove", e=>{
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "💖";
-    heart.style.position = "fixed";
-    heart.style.left = e.clientX + "px";
-    heart.style.top = e.clientY + "px";
-    heart.style.fontSize = "16px";
-    heart.style.opacity = 0.7;
-    heart.style.animation = "follow 1s ease-out forwards";
-    document.body.appendChild(heart);
-    setTimeout(()=>heart.remove(), 1000);
-  });
+  // Cœurs qui suivent la souris → seulement sur PC
+  if(window.innerWidth > 768){ // désactive sur mobile
+    document.addEventListener("mousemove", e=>{
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "💖";
+      heart.style.position = "fixed";
+      heart.style.left = e.clientX + "px";
+      heart.style.top = e.clientY + "px";
+      heart.style.fontSize = "16px";
+      heart.style.opacity = 0.7;
+      heart.style.animation = "follow 1s ease-out forwards";
+      document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(), 1000);
+    });
+  }
 
   // Musique douce fade-in
   const music = document.getElementById("music");
